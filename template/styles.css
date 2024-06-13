@@ -1,0 +1,94 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh; /* 使用vh单位确保充满整个视口高度 */
+  overflow: hidden; /* 防止body滚动条出现 */
+}
+
+.chat-app {
+  width: 100%;
+  margin: 0 auto; /* 居中显示 */
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 90vh; /* 占据视口的90%，留出一些空间防止整页滚动 */
+  display: flex;
+  flex-direction: column;
+  max-width: 800px; /* 限制最大宽度，使聊天界面在大屏上也看起来很合适 */
+}
+
+.chat-header {
+  background-color: #010f0195;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.chat-box {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #e9ecef;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.chat-input-container {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  background-color: #dee2e6;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.chat-input-container input {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc; /* 给输入框增加边框以提高对比度和可见性 */
+  border-radius: 5px;
+}
+
+.chat-input-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1em;
+  max-width: 70%;
+  clear: both;
+}
+
+.user-message {
+  background-color: #dcf8c6;
+  float: right; /* 用户消息靠右浮动，突出显示 */
+}
+
+.ai-message {
+  background-color: #07bb5b;
+  color: white;
+  float: left; /* AI或其他人的消息靠左浮动 */
+}
+
+#chatBox .message pre {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 5px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: .9em; /* 微调代码块内文本的尺寸，使其看起来更加合适 */
+  margin: 0; /* 移除默认的 margin */
+  overflow: auto; /* 如果pre内的内容过宽，允许横向滚动 */
+}
